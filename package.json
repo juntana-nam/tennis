@@ -1,0 +1,22 @@
+{
+  "name": "tennis-pokemon-class",
+  "version": "1.0.0",
+  "description": "This is the bootstrapping TDD in Javascript for BUU class",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ballweera/tennis-pokemon-class.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ballweera/tennis-pokemon-class/issues"
+  },
+  "homepage": "https://github.com/ballweera/tennis-pokemon-class#readme",
+  "devDependencies": {
+    "jasmine": "^2.5.2"
+  }
+}

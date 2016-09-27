@@ -11,6 +11,9 @@ function Tennis(){
     if(scoreA === 0 || scoreA === 15){
       scoreA += 15;
     }
+    else if(scorA === 30){
+      scoreA += 10;
+    }
   };
 
   var sum = 0;
@@ -25,6 +28,8 @@ function Tennis(){
       else if(sum === 15){
         tmp += 'Fifteen';
       }
+
+
 
       sum = scoreB;
 
@@ -48,7 +53,7 @@ describe('Tennis game', function(){
     expect(tennis.echo()).toEqual('Love - Love');
   });
 
-  it('Should echo "Fifty - Love" when Score A = 15 on the game', function(){
+  it('Should echo "Fifteen - Love" when Score A = 15 on the game', function(){
     var tennis = new Tennis();
     tennis.start();
     tennis.getScoreA();

@@ -11,7 +11,7 @@ function Tennis(){
     if(scoreA === 0 || scoreA === 15){
       scoreA += 15;
     }
-    else if(scorA === 30){
+    else if(scoreA === 30 || scoreA === 40){
       scoreA += 10;
     }
   };
@@ -28,9 +28,17 @@ function Tennis(){
       else if(sum === 15){
         tmp += 'Fifteen';
       }
+      else if(sum === 30){
+        tmp += 'Thirty';
+      }
+      else if(sum === 40){
+        tmp += 'Forty';
+      }
 
 
-
+      if( sum !== 50 && i === 0){
+        tmp += ' - ';
+      }
       sum = scoreB;
 
       }
@@ -39,11 +47,9 @@ function Tennis(){
 
   this.echo = function(){
     return tmp;
-  }
+  };
 }
 
-
-};
 
 describe('Tennis game', function(){
   it('Should echo "Love - Love" when Score A and Score B = 0 on the game', function(){

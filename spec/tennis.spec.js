@@ -34,6 +34,10 @@ function Tennis(){
       else if(sum === 40){
         tmp += 'Forty';
       }
+      else if(sum === 50 && i === 0){
+        tmp = 'A Win the game';
+        break
+      }
 
 
       if( sum !== 50 && i === 0){
@@ -83,5 +87,15 @@ describe('Tennis game', function(){
    tennis.getScoreA();
    tennis.findScore();
    expect(tennis.echo()).toEqual('Forty - Love');
+ });
+ it('Should echo "Win the game" when Score A = 50 on the game', function(){
+   var tennis = new Tennis();
+   tennis.start();
+   tennis.getScoreA();
+   tennis.getScoreA();
+   tennis.getScoreA();
+   tennis.getScoreA();
+   tennis.findScore();
+   expect(tennis.echo()).toEqual('A Win the game');
  });
   });

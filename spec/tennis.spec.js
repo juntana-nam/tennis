@@ -55,4 +55,13 @@ describe('Tennis game', function(){
     tennis.findScore();
     expect(tennis.echo()).toEqual('Fifteen - Love');
   });
+
+  it('Should echo "Thirty - Love" when Score A = 30 on the game', function(){
+    var tennis = new Tennis();
+    tennis.start();
+    tennis.getScoreA();
+    tennis.getScoreA();
+    tennis.findScore();
+    expect(tennis.echo()).toEqual('Thirty - Love');
+  });
   });

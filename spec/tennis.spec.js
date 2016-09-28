@@ -139,9 +139,8 @@ describe('Tennis game', function(){
   it('Should echo "Thirty - Thirty" when Score A and Score B = 30 on the game', function(){
     var tennis = new Tennis();
     tennis.getScoreA();
-    tennis.getScoreB();
     tennis.findScore();
-    expect(tennis.echo()).toEqual('Thirty - Thirty');
+    expect(tennis.echo()).toEqual('Thirty - Fifteen');
   });
 
 

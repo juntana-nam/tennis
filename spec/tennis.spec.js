@@ -16,6 +16,14 @@ function Tennis(){
     }
   };
 
+  this.getScoreB = function(){
+    if(scoreB === 0 || scoreB === 15 ){
+      scoreB += 15;
+    }
+    else
+      scoreB += 10;
+  };
+
   var sum = 0;
   var tmp = '';
 

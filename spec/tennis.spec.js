@@ -46,11 +46,11 @@ function Tennis(){
         tmp += 'Forty';
       }
       else if(sum === 50 && i === 0){
-        tmp = 'A Win the game';
+        tmp = 'player A won';
         break
       }
       else if(sum === 50 && i === 1){
-        tmp = 'B Win the game';
+        tmp = 'player B won';
         break;
       }
 
@@ -101,7 +101,7 @@ describe('Tennis game', function(){
    var tennis = new Tennis();
    tennis.getScoreA();
    tennis.findScore();
-   expect(tennis.echo()).toEqual('A Win the game');
+   expect(tennis.echo()).toEqual('player A won');
  });
  it('Should echo Love - Fifteen when Score B = 15 on the game', function(){
     var tennis = new Tennis();
@@ -126,7 +126,7 @@ describe('Tennis game', function(){
     var tennis = new Tennis();
     tennis.getScoreB();
     tennis.findScore();
-    expect(tennis.echo()).toEqual('B Win the game');
+    expect(tennis.echo()).toEqual('player B won');
   });
   it('Should echo "Fifty - Fifty" when Score A and Score B = 15 on the game', function(){
     var tennis = new Tennis();

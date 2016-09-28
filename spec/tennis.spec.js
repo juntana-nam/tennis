@@ -136,4 +136,24 @@ describe('Tennis game', function(){
     tennis.findScore();
     expect(tennis.echo()).toEqual('B Win the game');
   });
+  it('Should echo "Fifty - Fifty" when Score A and Score B = 15 on the game', function(){
+    var tennis = new Tennis();
+    tennis.start();
+    tennis.getScoreA();
+    tennis.getScoreB();
+    tennis.findScore();
+    expect(tennis.echo()).toEqual('Fifteen - Fifteen');
+  });
+  it('Should echo "Thirty - Thirty" when Score A and Score B = 30 on the game', function(){
+    var tennis = new Tennis();
+    tennis.start();
+    tennis.getScoreA();
+    tennis.getScoreA();
+    tennis.getScoreB();
+    tennis.getScoreB();
+    tennis.findScore();
+    expect(tennis.echo()).toEqual('Thirty - Thirty');
+  });
+
+
   });

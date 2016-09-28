@@ -38,6 +38,10 @@ function Tennis(){
         tmp = 'A Win the game';
         break
       }
+      else if(sum === 50 && i === 1){
+        tmp = 'B Win the game';
+        break;
+      }
 
 
       if( sum !== 50 && i === 0){
@@ -98,4 +102,38 @@ describe('Tennis game', function(){
    tennis.findScore();
    expect(tennis.echo()).toEqual('A Win the game');
  });
+ it('Should echo Love - Fifteen when Score B = 15 on the game', function(){
+    var tennis = new Tennis();
+    tennis.start();
+    tennis.getScoreB();
+    tennis.findScore();
+    expect(tennis.echo()).toEqual('Love - Fifteen');
+  });
+  it('Should echo Love - Thirty when Score B = 30 on the game', function(){
+    var tennis = new Tennis();
+    tennis.start();
+    tennis.getScoreB();
+    tennis.getScoreB();
+    tennis.findScore();
+    expect(tennis.echo()).toEqual('Love - Thirty');
+  });
+  it('Should echo Love - Forty when Score B = 40 on the game', function(){
+    var tennis = new Tennis();
+    tennis.start();
+    tennis.getScoreB();
+    tennis.getScoreB();
+    tennis.getScoreB();
+    tennis.findScore();
+    expect(tennis.echo()).toEqual('Love - Forty');
+  });
+  it('Should echo "B Win the game" when Score B = 50 on the game', function(){
+    var tennis = new Tennis();
+    tennis.start();
+    tennis.getScoreB();
+    tennis.getScoreB();
+    tennis.getScoreB();
+    tennis.getScoreB();
+    tennis.findScore();
+    expect(tennis.echo()).toEqual('B Win the game');
+  });
   });
